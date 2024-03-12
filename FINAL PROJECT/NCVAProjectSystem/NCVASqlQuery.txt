@@ -1,0 +1,58 @@
+-- Create the NCVADatabase2 database
+CREATE DATABASE NCVADatabase2;
+
+-- Use the NCVADatabase2 database
+USE NCVADatabase2;
+
+-- Create the Applicant table
+CREATE TABLE Applicant (
+    ApplicantID INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(255),
+    Password NVARCHAR(255),
+    Email NVARCHAR(255),
+    MobilePhone NVARCHAR(15)
+);
+
+-- Create the Admin table
+CREATE TABLE Admin (
+    AdminID INT IDENTITY(1,1) PRIMARY KEY,
+    Username NVARCHAR(255),
+    Password NVARCHAR(255)
+);
+
+-- Create the JobPosition table
+CREATE TABLE JobPosition (
+    JobID INT PRIMARY KEY,
+    Title NVARCHAR(255),
+    Task NVARCHAR(MAX),
+    Salary DECIMAL(10, 2)
+);
+
+-- Create the JobApplication table
+CREATE TABLE JobApplication (
+    JobApplicationID INT IDENTITY(1,1) PRIMARY KEY,
+    ApplicantID INT FOREIGN KEY REFERENCES Applicant(ApplicantID),
+    JobID INT FOREIGN KEY REFERENCES JobPosition(JobID),
+    DateSubmitted DATETIME,
+    Status NVARCHAR(50)
+);
+
+-- Insert data into the Applicant table
+INSERT INTO Applicant (Name, Password, Email, MobilePhone) VALUES
+('Applicant1', 'password1', 'applicant1@example.com', '1234567890'),
+('Applicant2', 'password2', 'applicant2@example.com', '9876543210');
+
+-- Insert data into the Admin table
+INSERT INTO Admin (Username, Password) VALUES
+('Admin1', 'adminpassword1'),
+('Admin2', 'adminpassword2');
+
+-- Insert data into the JobPosition table
+INSERT INTO JobPosition (Title, Task, Salary) VALUES
+('Software Engineer', 'Develop software applications', 80000.00),
+('Marketing Specialist', 'Create marketing campaigns', 60000.00);
+
+-- Insert data into the JobApplication table
+INSERT INTO JobApplication (ApplicantID, JobID, DateSubmitted, Status) VALUES
+(1, 1, GETDATE(), 'Pending'),
+(2, 2, GETDATE(), 'Reviewed');
