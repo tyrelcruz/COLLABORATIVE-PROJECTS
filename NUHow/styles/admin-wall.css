@@ -1,0 +1,404 @@
+body{
+    padding: 20px 0;
+    display: flex;
+    position: relative;
+}
+aside{
+    z-index: 5;
+  position: fixed;   
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(255, 233, 217, 0.25) 8%, rgba(254, 212, 181, 0.25) 62%, rgba(189, 178, 255, 0.125) 95%);
+  border: 4px solid;
+  border-image-source: linear-gradient(180deg, #FFE9D9 8%, rgba(254, 212, 181, 0.75) 46.5%, rgba(189, 178, 255, 0.5) 95%);
+  box-shadow: 4px 7px 10px 1px rgba(174, 173, 173, 0.25);
+  justify-content: space-between;
+
+  align-items: center;
+  padding: 20px 15px;
+}
+
+aside .nav-upper-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+}
+
+aside .admin-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1.5px solid black;
+    padding-bottom: 10px;
+    width: 100%;
+
+}
+aside .logo-container,
+header .logo-container{
+    color:rgb(252, 213, 129);
+    font-weight: 700;
+    font-size: 30px;
+}
+aside .logo-container{
+   margin-bottom: 5px;
+}
+aside .logo-container span,
+header .logo-container span{
+    color:black
+}
+aside .admin{
+    font-weight: 600;
+    margin-bottom:8px;
+}
+
+.navs-container{
+    margin-top: 5px;
+    width: 100%;
+
+}
+.single-container, .logout{
+    font-size: .96em;
+    color: rgb(130,130,130);
+    font-weight: 500;
+    padding: 10px 7px;
+
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.single-container:hover{
+    background-color: rgb(251, 249, 242);
+}
+.nav-lower-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.nav-lower-container .profile-container{
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    border-top: solid 1px black;
+    margin-top: 8px;
+}
+.admin-image-container img{
+    width: 38px;
+    border-radius: 50%;
+}
+.admin-details-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.admin-details-container .name{
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.admin-details-container .role{
+    font-weight: 600;
+    color:rgb(130,130,130);
+    font-size: .85em;
+}
+
+main{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 210px;
+    padding:0 70px;
+    padding-top: 30px;
+}
+
+.posts-list-container{
+    margin-top: 80px ;
+    width: 100%;
+    row-gap: 70px;
+    padding-bottom: 100px;
+}
+
+.post-container{
+    min-width: 200px;
+}
+.submitted-questions-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    row-gap: 15px;
+}
+.submitted-questions-container .messages-found{
+    font-size: .85em;
+    font-style: italic;
+}
+.submitted-questions-container input{
+    border: none;
+    padding: 14px 20px;
+    width: 100%;
+    border-radius: 14px;
+}
+.submissions{
+    color:rgb(14, 28, 54);
+    margin-bottom: 40px;
+}
+
+.background-image {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.5);
+    object-fit: cover;
+    object-position: right;
+    z-index: -100;
+    opacity: .05;
+    
+}
+.post-container{
+    position: relative;
+
+}
+.post-container:hover{
+    transform: none;
+}
+.action-container{
+    position: absolute;
+    top: -30px;
+    display: flex;
+    left: 0;
+    column-gap: 2px;
+}
+.action-container div{
+    border: solid 1px transparent;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 3px;
+    background-color: rgb(249, 246, 246);
+    font-size: .85em;
+    border: solid .5px rgb(224, 224, 224);
+    transition: 0.2s background-color;
+}
+
+.approve{
+    border: solid 1px black;
+    z-index: 100;
+}
+.approve:hover{
+    background-color: rgba(2, 143, 2, 0.727);
+    color: white;
+}
+.reject:hover,
+.delete:hover{
+    background-color: rgb(218, 4, 4);
+    color: white;
+}
+.feature:hover,
+.set-feature:hover{
+    background-color: rgba(244, 244, 49, 0.937);
+    color: black;
+}
+
+.approve-container,
+.reject-container,
+.feature-container,
+.delete-container,
+.setFeature-container{
+    text-align: center;
+    letter-spacing: .8px;
+    position: fixed;
+    top: 50vh;
+    left: 50%;
+    z-index: 1000;
+    transform: translate(-50%, -50%); 
+    padding: 50px 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 35px;
+    border-radius: 5px;
+    box-shadow: 0px 7px 10px 1px rgba(174, 173, 173, 0.25);
+    margin-left: 90px;
+    justify-content: space-between;
+    height: 25vh;
+
+}
+.approve-container .confirm-message,
+.reject-container .confirm-message,
+.feature-container .confirm-message,
+.delete-container .confirm-message,
+.setFeature-container .confirm-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+    position: relative;
+    margin-top: 60px;
+}
+.approve-container .thank-you,
+.reject-container  .thank-you,
+.feature-container  .thank-you,
+.delete-container .thank-you,
+.setFeature-container .thank-you{
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.approve-container .confirm-details,
+.reject-container .confirm-details,
+.feature-container  .confirm-details,
+.delete-container .confirm-details,
+.setFeature-container .confirm-details{
+    font-size: .9em;
+    font-weight: 300;
+}
+.confirm-choices-container{
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+}
+.confirm-choices-container div{
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    font-size: .8em;
+    border-radius:3px;
+    box-shadow: 1px 5px 4px 1px rgba(174, 173, 173, 0.1);
+    color: white;
+    cursor: pointer;
+}
+.approve-container .confirm-choices-container .confirm{
+    background-color: green;
+}
+.reject-container .confirm-choices-container .confirm,
+.delete-container .confirm-choices-container .confirm{
+    background-color: rgb(243, 66, 53);
+}
+.feature-container .confirm-choices-container .confirm,
+.setFeature-container .confirm-choices-container .confirm{
+    background-color: rgb(255, 213, 62);
+}
+.confirm-choices-container .cancel{
+    background-color: rgb(208, 208, 208);
+}
+
+.confirm-image{
+    position: absolute;
+    top: -180px;
+    width: 150px;
+    box-shadow: 0px 7px 10px 1px rgba(174, 173, 173, 0.25);
+    border-radius: 50%;
+}
+
+.approve-container{
+    display: none;
+}
+.reject-container{
+    display: none;
+}
+.feature-container{
+    display: none;
+}
+.delete-container{
+    display: none;
+}
+.setFeature-container{
+    display: none;
+}
+
+
+header{
+    display: none;
+}
+.exit-button{
+    display: none;
+}
+
+@media only screen and (max-width: 750px) {
+    body {
+        margin-top: 80px;
+    }
+    main {
+        margin-left: 0;
+    }
+    aside {
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for smooth effect */
+        z-index: 10000;
+        transform: translateX(-100%);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 240px;
+        background-color: antiquewhite;
+    }
+    .exit-button {
+        font-weight: 600;
+        z-index: 2000;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        display: flex;
+        cursor: pointer;
+    }
+    aside.show {
+        opacity: 1;
+        transform: translateX(0); /* Show the aside */
+        width: 50%;
+    }
+    aside.hidden {
+        opacity: 0.1;
+        transform: translateX(-100%); /* Hide the aside */
+    }
+    header {
+        display: flex;
+        background-image: none;
+        transition: opacity 0.3s ease;
+    }
+    header.hidden {
+        opacity: 0;
+        pointer-events: none; /* Ensure hidden header doesn't interfere with clicks */
+    }
+    header img {
+        justify-content: space-between;
+        width: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .approve-container,
+    .reject-container,
+    .feature-container,
+    .delete-container,
+    .setFeature-container {
+        margin-left: 0;
+        width: 60vw;
+        height: 25vh;
+    }
+    .approve-container,
+    .reject-container,
+    .feature-container,
+    .delete-container,
+    .setFeature-container{
+        font-size: .85em;
+    }
+    .post-container{
+        width: 70%;
+        height: 50vh;
+    }
+    main{
+        width: 100vw;
+        padding: 0 0;
+    }
+
+}

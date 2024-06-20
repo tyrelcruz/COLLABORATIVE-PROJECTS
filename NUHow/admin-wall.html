@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link href="styles/general.css" rel="stylesheet">
+      <link href="styles/post-list.css" rel="stylesheet">
+
+      <link href="styles/admin-wall.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <title>NU How | Admin Wall</title>
+  </head>
+  <body>
+
+   <aside>
+    <div class="exit-button">x</div>
+    <div class="nav-upper-container">
+      <div class="admin-container">
+        <div class="logo-container"><span>NU</span>How</div>
+        <div class="admin">Admin</div>
+      </div>
+     
+      <div class="navs-container">
+        <div class="single-container js-nav-submissions">
+          <div>Submissions</div>
+        </div>
+        <div class="single-container js-nav-wall">
+          <div>Wall</div>
+        </div>
+        <div class="single-container js-nav-featured">
+          <div>Featured</div>
+        </div>
+
+      </div>
+
+    </div>
+    <div class="nav-lower-container">
+      <div class="single-container logout">
+        <a href="index.html">Log Out</a>
+      </div>
+      <div class="profile-container">
+       <div class="admin-image-container">
+        <img src="images/profile-pic.jpg">
+       </div>
+       <div class="admin-details-container">
+        <div class="name">Neo David</div>
+        <div class="role">Front-End</div>
+       </div>
+      </div>
+    </div>
+
+   </aside>
+
+   <header>
+    <img src="images/profile-pic.jpg">
+    <div class="logo-container"><span>NU</span>How</div>
+    <a href="index.html" class="logout">Logout</a>
+   </header>
+
+
+   <main>
+    <h1 class="submissions js-title-top">Submissions</h1>
+    <div class="submitted-questions-container">
+      <div class="messages-found">1234 Submitted Questions</div>
+      <input class="admin-searchbar" placeholder="Search for posts.">
+    </div>
+    <div class="posts-list-container js-posts-list-container"></div>
+  </main>
+  
+   <script src="scripts/admin-wall.js" type="module"></script>
+   <script src="styles/frontend/admin-wall.js" type="module"></script>
+  </body>
+
+</html>

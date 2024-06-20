@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- EXTENSIONS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="styles/loginpage.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUHow - Admin Login</title>
+</head>
+<body>
+    <div class="bgcolor"></div>
+    <header class = 'header'>
+        <img class="menu"src="images/menu.png">
+        <div class="slider">
+          <a href="index.html">Home</a>
+          <a href="featuredpage.html">Featured</a>
+          <a href="aboutpage.html">About</a>
+          <a href="contactpage.html">Contact</a>
+          <a href="loginpage.html">Admin Log In</a>
+        </div>
+        <div class = 'header_name'>
+          <div class = 'header_title'><a href="index.html"><span class = 'color1'>NU</span><span class = 'color2'>How</span></a></div>
+        </div>
+        <nav class = 'nav'>
+          <div class="nav_container">
+            <a id="inboxpage-link"href="wall.html" class="home">Home</a>
+            <a id="featuredpage-link"href="featuredpage.html" class="featured">Featured</a>
+            <a id="aboutpage-link"href="aboutpage.html" class="about">About</a>
+            <a id="contactpage-link"href="contactpage.html" class="contact">Contact</a>
+          </div>
+          <div class = 'nav_button'>
+            <a href="loginpage.html">
+                <button class = 'nav_writeButton'>
+                    <i class="fa fa-user"></i>
+                    &nbsp;Admin Login
+                </button>
+            </a>
+        </div>
+      </nav>
+    </header>
+    
+    <div class="wrapper">
+        <h2>Admin Login</h2>
+        <hr>
+        <p>* Required</p>
+        <form id="loginForm">
+            <div class="input-field">
+                <input type="email" id="email" placeholder="Email *" required autocomplete="email">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <div class="input-field">
+                <input type="password" id="password" placeholder="Password *" required autocomplete="current-password">
+                <i class="fa fa-eye-slash" onclick="ChangeIcon(this)"></i>
+            </div>
+            <button type="submit" class="login">Login</button>
+        </form>
+    </div>
+    <script src="scripts/login.js" type="module"></script>
+    <script src="styles/frontend/passvisibility.js"></script>
+    <script src="styles/frontend/slider.js"></script>
+
+</body>
+</html>

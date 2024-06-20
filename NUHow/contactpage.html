@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUHow - Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/contactpage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://embed.pickaxeproject.com/axe/scripts/fab/styles.css">
+    <script src="https://embed.pickaxeproject.com/axe/scripts/fab/bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header class = 'header'>
+        <img class="menu"src="images/menu.png">
+        <div class="slider">
+          <a href="index.html">Home</a>
+          <a href="featuredpage.html">Featured</a>
+          <a href="aboutpage.html">About</a>
+          <a href="contactpage.html">Contact</a>
+          <a href="loginpage.html">Admin Log In</a>
+        </div>
+        <div class = 'header_name'>
+          <div class = 'header_title'><a href="index.html"><span class = 'color1'>NU</span><span class = 'color2'>How</span></a></div>
+        </div>
+        <nav class = 'nav'>
+          <div class="nav_container">
+            <a id="inboxpage-link"href="index.html" class="home">Home</a>
+            <a id="featuredpage-link"href="featuredpage.html" class="featured">Featured</a>
+            <a id="aboutpage-link"href="aboutpage.html" class="about">About</a>
+            <a id="contactpage-link"href="contactpage.html" class="contact">Contact</a>
+          </div>
+          <div class = 'nav_button'>
+            <a href="loginpage.html">
+                <button class = 'nav_writeButton'>
+                    <i class="fa fa-user"></i>
+                    &nbsp;Admin Login
+                </button>
+            </a>
+        </div>
+      </nav>
+    </header>
+    
+    <main class='main'>
+        <div class="container">
+            <div class="contact-container">
+                <h2>Get in Touch</h2>
+                <h3>We would love to hear from you.</h3>
+                <h3>If you have any questions, please feel free to reach out.</h3>
+                <hr>
+                <p>* Required</p>
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" id="name" placeholder="Full Name" required>
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="email" id="email" placeholder="Email *" required autocomplete="email">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="input-field">
+                        <textarea id="message" placeholder="Message *" rows="4" required maxlength="2000"></textarea>
+                    </div>
+                    <div id="the-count">
+                        <span id="current">0</span>
+                        <span id="maximum">/ 2000</span>
+                    </div>
+                </form>
+                <button type="submit" class="submit" onclick="validateAndSendMail(); return false">Submit</button>
+            </div>
+        </div>
+        <div class="bgcolor2"></div>
+    </main>
+    <footer>
+        <div class='names'>
+            <h2>Developers</h2>
+            <p>Tristan Cura</p>
+            <p>Tyrel Cruz</p>
+            <p>Neo David</p>
+            <p>Russel Rapi</p>
+        </div>
+        <div class='email'>
+            <h2>Email</h2>
+            <p>curatp@students.national-u.edu.ph</p>
+            <p>cruztp@students.national-u.edu.ph</p>
+            <p>davidnm@students.national-u.edu.ph</p>
+            <p>rapirg@students.national-u.edu.ph</p>
+        </div>
+        <div class='footer_git'>
+            <h2>Github</h2>
+            <a href="https://github.com/TristanCura" target="_blank">TristanCura</a>
+            <a href="https://github.com/tyrelcruz" target="_blank">tyrelcruz</a>
+            <a href="https://github.com/Richtofenn" target="_blank">Richtofenn</a>
+            <a href="https://github.com/syllablelous" target="_blank">syllableous</a>
+        </div>
+        <div class='description-container'>
+            <div class="title">
+                <span>NU</span>
+                <span class="color2">How</span>
+            </div>
+            <p>&emsp;NUHow is a website where National University Philippines students can ask questions, inquiries, guides and tutorials on any topic to which any students can answer and reply to.
+                This project was created for the subject Web Systems and Technologies by 4 students from CCIT's INF224.
+            </p>
+        </div>
+    </footer>
+    <script src="styles/frontend/charactercount.js"></script>
+    <script src="scripts/data/contact.js"></script>
+    <script src="styles/frontend/slider.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>

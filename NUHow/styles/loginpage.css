@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+a{
+    text-decoration: none;
+}
+body {
+    background: url(/NUHow/images/login_img.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 1000px;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Inter";
+}
+
+.bgcolor {
+    background-image: linear-gradient(to bottom, #faddc37b, #8080c063);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(to right, #ffecc79d, #fed3b5af, #c9c0ffb8);
+    padding: 10px 50px;
+    height: 50px;
+    align-items: center;
+    box-shadow: 0px -10px 20px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+
+.header div {
+    font-weight: 800;
+    font-size: 30px;
+    user-select: none;
+}
+
+.color1 {
+    color: #0E1C36;
+}
+
+.color2 {
+    color: #EECC82;
+}
+
+.color3 {
+    color: #FFF8E8;
+}
+
+.nav .nav_button a {
+    padding: 0;
+}
+
+
+.nav {
+    display: flex;
+    column-gap: 1px;
+    font-size: 17px;
+    font-weight: 400;
+    align-items: center;
+}
+
+.nav div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.nav a {
+    padding: 5px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.home:hover,
+.featured:hover,
+.about:hover,
+.contact:hover {
+    border-radius: 5px;
+    transform: scale(1.1, 1.1);
+}
+
+.nav_writeButton {
+    background-color: rgb(16, 30, 56);
+    color: #FFF8E8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav_writeButton:hover {
+    background-color: rgb(44, 59, 89);
+    transform: scale(1.1, 1.1);
+}
+
+.color1 {
+    color: #0E1C36;
+}
+
+.color2 {
+    color: #EECC82;
+}
+
+hr {
+    position: relative;
+    left: 3%;
+    width: 250px;
+    color: #FFF8E8;
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    padding-top: 5px;
+    position: relative;
+    left: -35%;
+}
+
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 330px;
+    text-align: center;
+    border: 1px solid #FFF8E8;
+    border-radius: 12px;
+    padding: 10px 20px;
+    padding-left: 0px;
+    background-color: rgba(81, 80, 80, 0.384);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    color: #FFF8E8;
+}
+
+.wrapper h2 {
+    font-size: 30px;
+    color: #FFF8E8;
+    left: 5%;
+    position: relative;
+}
+
+input {
+    color: #FFF8E8;
+}
+
+.input-field {
+    position: relative;
+}
+
+.input-field input[type="email"],
+.input-field input[type="text"],
+.input-field input[type="password"] {
+    border-radius: 10px;
+    background: transparent;
+    margin: 15px;
+    border: 2px solid #FFF8E8;
+    width: 280px;
+    height: 2px;
+    padding: 20px 40px 20px 20px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    /* Safari */
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    color: #FFF8E8;
+}
+
+.input-field i.fa-eye-slash {
+    cursor: pointer;
+}
+
+.input-field i.fa-eye {
+    cursor: pointer;
+}
+
+input::placeholder {
+    color: #FFF8E8;
+}
+
+.input-field input[type="email"]:focus::placeholder,
+.input-field input[type="text"]:focus::placeholder,
+.input-field input[type="password"]:focus::placeholder {
+    transform: translateX(-50%);
+    transition: transform 0.4s ease-in-out;
+    font-size: 14px;
+}
+
+.input-field input[type="email"]:not(:focus)::placeholder,
+.input-field input[type="text"]:not(:focus)::placeholder,
+.input-field input[type="password"]:not(:focus)::placeholder {
+    transform: translateX(0%);
+    transition: transform 0.4s ease-in-out;
+    font-size: 14px;
+}
+
+.wrapper .login {
+    position: absolute;
+    background: #0E1C36;
+    color: #FFF8E8;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 45px;
+    width: 200px;
+    height: 30px;
+    left: 25%;
+    bottom: 10%;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.wrapper .login:hover {
+    background-color: rgb(44, 59, 89);
+    transform: scale(1.1, 1.1);
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="styles/general.css" rel="stylesheet">
+  <link href="styles/wall.css" rel="stylesheet">
+  <link href="styles/post-list.css" rel="stylesheet">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+ 
+  <!-- EMBEDDED CHATBOT -->
+  <link rel="stylesheet" href="https://embed.pickaxeproject.com/axe/scripts/fab/styles.css">
+  <script src="https://embed.pickaxeproject.com/axe/scripts/fab/bundle.js"></script>
+  <div id="rendering-information" data-height="500px" data-width="100%" data-formid="NUHow__Website_Assistant_4ZCXG" data-frame-source="https://embed.pickaxeproject.com/axe?id=NUHow__Website_Assistant_4ZCXG&mode=embed_gold&host=beta&theme=custom&opacity=50&font_header=Real+Head+Pro&size_header=30&font_body=Real+Head+Pro&size_body=16&font_labels=Real+Head+Pro&size_labels=14&font_button=Real+Head+Pro&size_button=16&c_fb=08090B&c_ff=08090B&c_fbd=FFFFFF&c_rb=7F7F7F&c_bb=FFFFFF&c_bt=FFFFFF&c_t=FFFFFF&s_ffo=100&s_rbo=100&s_bbo=100&s_f=minimalist&s_b=outline&s_t=0.5&s_to=1&s_r=10" data-title="NUHow - Assistant"> <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUHow - Home</title>
+</head>
+<body>
+
+
+  <header class = 'header'>
+    <img class="menu"src="images/menu.png">
+    <div class="slider">
+      <a href="index.html">Home</a>
+      <a href="featuredpage.html">Featured</a>
+      <a href="aboutpage.html">About</a>
+      <a href="contactpage.html">Contact</a>
+      <a href="loginpage.html">Admin Log In</a>
+    </div>
+    <div class = 'header_name'>
+      <div class = 'header_title'><a href="index.html"><span class = 'color1'>NU</span><span class = 'color2'>How</span></a></div>
+    </div>
+    <nav class = 'nav'>
+      <div class="nav_container">
+        <a id="inboxpage-link"href="index.html" class="home">Home</a>
+        <a id="featuredpage-link"href="featuredpage.html" class="featured">Featured</a>
+        <a id="aboutpage-link"href="aboutpage.html" class="about">About</a>
+        <a id="contactpage-link"href="contactpage.html" class="contact">Contact</a>
+      </div>
+      <div class = 'nav_button'>
+        <a href="loginpage.html">
+            <button class = 'nav_writeButton'>
+                <i class="fa fa-user"></i>
+                &nbsp;Admin Login
+            </button>
+        </a>
+    </div>
+  </nav>
+</header>
+
+  <main>
+        <div class = 'banner'>
+            <div class = 'banner_text'>
+                <img src="images/img1.jpg">
+                <h1 class="text-1"><span class="typing"></span></h1>
+                <h3>A Guide For Nationalians, by Nationalians.</h3>
+                <div class="buttons-container">
+                  <button class="learn-more">
+                    <a href="aboutpage.html">
+                    <i class = "fa fa-book"></i>
+                    &nbsp;Learn More</button>
+                    </a>
+                  <button class="js-write-button">
+                    <i class = "fa fa-pencil"></i>
+                    &nbsp;Post a Question</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+  <div class="messages-found-container js-messages-found">
+    <div class="messages-found"></div>
+    <div class="search-container">
+  
+      <!-- Dropdown container for the search container -->
+      <div class="dropdown">
+
+        <!-- Filter Dropdown (Topics)-->
+        <div id="filter-drop-text" class="dropdown-text">
+          <span id="filter-spantext">Filter</span>
+          <i id="filter-icon" class="fa-solid fa-chevron-down"></i>
+        </div>
+        <ul id="filter-list" class="dropdown-list">
+          <li class="dropdown-list-item">All Posts</li>
+          <li class="dropdown-list-item">Technology</li>
+          <li class="dropdown-list-item">Literature</li>
+          <li class="dropdown-list-item">Art</li>
+          <li class="dropdown-list-item">Politics</li>
+        </ul>
+
+        <hr>
+
+        <!-- Sort Dropdown (Author, Title, Message)-->
+        <div id="sort-drop-text" class="dropdown-text">
+          <span id="sort-spantext">Sort</span>
+          <i id="sort-icon" class="fa-solid fa-chevron-down"></i>
+        </div>
+        <ul id="search-list" class="dropdown-list" >
+          <li class="dropdown-list-item">None</li>
+          <li class="dropdown-list-item">Author</li>
+          <li class="dropdown-list-item">Title</li>
+          <li class="dropdown-list-item">Message</li>
+        </ul>
+
+      </div>
+
+      <div class="search-box">
+        <hr>
+        <input id="search-input" class="search-bar" placeholder="Search">
+        <hr>
+        <i id="search-icon" class="fa fa-search"></i>
+      </div> 
+      
+    </div>
+  </div>
+
+  <div class="posts-list-container js-posts-list-container">
+  </div>
+
+  <div class="wrapper">
+  </div> 
+  <div class="write-message-container">
+    <div class="exit-button">
+      <i class="fa fa-times"></i>
+    </div>
+    <div class="write-container">
+      <!-- Hidden file input -->
+      <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
+
+      <!-- Image that acts as a button -->
+      <img src="images/bulldog.jpeg" id="profile-picture-button" class="pencil" alt="Upload Profile Picture">
+      <input disabled placeholder="Write your Secret Message">
+    </div>
+    <div class="author-container">
+      <div>Author:</div>
+     <input>
+    </div>
+    <div class="author-error">Please enter an author.</div>
+    <div class="title-container">
+      <div>Title:</div>
+     <input>
+     <div class="title-error">Please enter a title.</div>
+    </div>
+    <div class="messager-container">
+      <div>Message:</div>
+      <textarea rows="10"></textarea>
+      <div class="message-error-max">Reached 2000 max characters.</div>
+      <div class="message-error-none">Input a character.</div>
+    </div>
+    <div class="theme-container">
+      <p>Theme: </p>
+      <div class="themes-choices-container">
+        <div class="js-blue"></div>
+        <div class="js-red"></div>
+        <div class="js-green"></div>
+        <div class="js-yellow"></div>
+      </div>
+    </div>
+    <div class="topic-container">
+      <p>Choose a topic: </p>
+      <div class="topics-choices-container">
+        <div><img src="images/technology.png" class="js-technology"></div>
+        <div><img src="images/literature.png" class="js-literature"></div>
+        <div><img src="images/art.png" class="js-art"></div>
+        <div><img src="images/politics.png" class="js-politics"></div> 
+      </div>
+    </div>
+    <div class="responsive-post-button js-responsive-button">
+      Post
+    </div>
+    <button class="post-button js-post-button">Post</button>
+  </div>
+
+  <!--Scroll Up BTN Feature-->
+  <div class="scroll-up-btn">
+    <i class="fa-solid fa-angle-up"></i>
+  </div>
+  <!--ENDS HERE Scroll Up BTN-->
+
+  <footer>
+    <div class = 'names'>
+        <h2>Developers</h2>
+        <p>Tristan Cura</p>
+        <p>Tyrel Cruz</p>
+        <p>Neo David</p>
+        <p>Russel Rapi</p>
+    </div>
+    <div class = 'email'>
+        <h2>Email</h2>
+        <p>curatp@students.national-u.edu.ph</p>
+        <p>cruztp@students.national-u.edu.ph</p>
+        <p>davidnm@students.national-u.edu.ph</p>
+        <p>rapirg@students.national-u.edu.ph</p>
+    </div>
+    <div class = 'footer_git'>
+        <h2>Github</h2>
+        <a href="https://github.com/TristanCura" target="_blank">TristanCura</a>
+        <a href="https://github.com/tyrelcruz" target="_blank">tyrelcruz</a>
+        <a href="https://github.com/Richtofenn" target="_blank">Richtofenn</a>
+        <a href="https://github.com/syllablelous" target="_blank">syllableous</a>
+    </div>
+
+    <div class = 'description-container'>
+      <div class="title">
+        <span>NU</span>
+        <span class="color2">How</span>
+      </div>
+      <p>&emsp;NUHow is a website where National University Philippines students can ask questions, inquiries, guides and tutorials on any topic to which any students can answer and reply to.
+          This project was created for the subject Web Systems and Technologies by 4 students from CCIT's INF224.
+      </p>
+  </div>
+   
+</footer>
+
+  <!--Typed.umd and Jquery are CDNJS jscript / External Javascript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="styles/frontend/highlightbutton.js" type="module"></script>
+  <script src="scripts/wall.js" type="module"></script>
+  <script src="scripts/data/posts.js" type="module"></script>
+  <script src="styles/frontend/textchange.js" type="module"></script>
+  <script src="styles/frontend/buttonup.js"></script>
+  <script src="styles/frontend/floating.js"></script>
+  <script src="styles/frontend/slider.js"></script>
+  
+</body>
+</html>
